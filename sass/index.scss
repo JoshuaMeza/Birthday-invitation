@@ -64,6 +64,34 @@ body {
 	}
 }
 
+// Confetti
+#confetti-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 80vh;
+}
+
+// Music
+#music-button {
+	cursor: pointer;
+	position: absolute;
+	top: 16px;
+	right: 16px;
+
+	width: 35px;
+	height: 35px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	i {
+		font-size: 16px;
+	}
+}
+
 // Dialog
 #dialog-box {
 	position: absolute;
@@ -99,7 +127,7 @@ body {
 // Lilo
 #lilo-character {
 	position: absolute;
-	bottom: 160px;
+	bottom: 150px;
 	right: 10px;
 	background-image: url("../images/lilo.png");
 }

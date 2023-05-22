@@ -36,15 +36,21 @@ var dialogs = [
 	},
 ];
 var nextIndex = 0;
+var musicPlaying = false;
 
-var showText = function (target, message, index, interval, changeBtnStatus) {
+var showText = function (target, message, index, interval, enableButton) {
 	if (index < message.length) {
 		$(target).append(message[index++]);
 		setTimeout(function () {
-			showText(target, message, index, interval, changeBtnStatus);
+			showText(target, message, index, interval, enableButton);
 		}, interval);
-	} else if (changeBtnStatus) {
-		$("#dialog-btn").prop("disabled", false);
+	} else {
+		if (enableButton) {
+			$("#dialog-btn").prop("disabled", false);
+		} else {
+			$("#dialog-btn").html("¡A celebrar!");
+			startConfetti();
+		}
 	}
 };
 
@@ -70,6 +76,7 @@ $(window).on("load", function () {
 	dialogButton.prop("disabled", false);
 	dialogButton.click(function (event) {
 		event.preventDefault();
+
 		nextDialog = dialogs.find((dialog) => dialog.index == nextIndex);
 		if (nextDialog != null) {
 			nextIndex++;
@@ -87,5 +94,22 @@ $(window).on("load", function () {
 			$("#dialog-content").html("");
 			showText("#dialog-content", nextDialog.content, 0, 40, !isLast());
 		}
+	});
+
+	// Music
+	var musicButton = $("#music-button");
+	var song = $("#song")[0];
+	musicButton.click(function (event) {
+		event.preventDefault();
+
+		if (musicPlaying) {
+			musicButton.children("i").removeClass("fa-beat-fade");
+			song.pause();
+		} else {
+			musicButton.children("i").addClass("fa-beat-fade");
+			song.play();
+		}
+
+		musicPlaying = !musicPlaying;
 	});
 });
