@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import "./variables";
+
+// General
+body,
+.background,
+#block-size {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    background-color: $stitch_blue;
+    position: relative;
+    font-family: 'Acme', sans-serif;
+}
+
+// Utilities
+.text-stitch {
+    color: $stitch_blue;
+}
+
+.character {
+    width: 40vw;
+    height: 30vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+// Block screen
+#block-size {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: $stitch_blue;
+}
+
+// Background
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 100%;
+        width: auto;
+        padding-right: 140px;
+    }
+}
+
+// Loader
+#loader {
+    position: absolute;
+    top: 50%;
+
+    .spinner-border {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+// Dialog
+#dialog-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+// Stitch
+#stitch-character {
+    position: absolute;
+    bottom: 160px;
+    left: 10px;
+}
+
+.can-jump {
+    transform: scaleY(1);
+    transition: all ease-in-out 0.1s;
+}
+
+.jump {
+    transform: scaleY(0.9);
+}
+
+.stitch-costume-1 {
+    background-image: url("../images/stitch_hello.png");
+}
+
+.stitch-costume-2 {
+    background-image: url("../images/stitch_happy.png");
+}
+
+// Lilo
+#lilo-character {
+    position: absolute;
+    bottom: 160px;
+    right: 10px;
+    background-image: url("../images/lilo.png");
+}
