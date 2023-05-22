@@ -1,14 +1,14 @@
 var dialogs = [
 	{
 		index: 0,
-		content: "¡Te invito a festejar el cumpleaños de mi mejor amigo! 🎉",
+		content: "¡Te invito a festejar el cumpleaños de mi mejor amigo! 🎊",
 		costume: 1,
 	},
 	{
-        index: 1,
-        content: "¡Jorgito Meza! ✨",
-        costume: 2 
-    },
+		index: 1,
+		content: "¡Jorgito Meza! ✨",
+		costume: 2,
+	},
 	{
 		index: 2,
 		content: "Va a cumplir 10 años y lo vamos a celebrar en grande 🎂",
@@ -26,14 +26,14 @@ var dialogs = [
 	},
 	{
 		index: 5,
-		content: "También, no olvides que Jorgito está juntando tapitas, por lo que nos ayudarías mucho trayendo algunas 😉",
+		content: "También, no olvides traer tus tapitas para que apoyemos a los niños con cáncer 😊",
 		costume: 1,
 	},
 	{
-        index: 6,
-        content: "¡No faltes! Te esperamos 🎉",
-        costume: 2
-    },
+		index: 6,
+		content: "¡Y sobre todo no faltes! Te esperamos 🎉",
+		costume: 2,
+	},
 ];
 var nextIndex = 0;
 
@@ -53,9 +53,9 @@ var isLast = function () {
 };
 
 var resetCostumes = function () {
-    var stitch = $("#stitch-character");
-    stitch.removeClass("stitch-costume-1");
-    stitch.removeClass("stitch-costume-2");
+	var stitch = $("#stitch-character");
+	stitch.removeClass("stitch-costume-1");
+	stitch.removeClass("stitch-costume-2");
 };
 
 $(window).on("load", function () {
@@ -75,8 +75,8 @@ $(window).on("load", function () {
 			nextIndex++;
 
 			// Stitch
-            resetCostumes();
-            stitch.addClass("stitch-costume-" + nextDialog.costume);
+			resetCostumes();
+			stitch.addClass("stitch-costume-" + nextDialog.costume);
 			stitch.addClass("jump");
 			setTimeout(function () {
 				stitch.removeClass("jump");
