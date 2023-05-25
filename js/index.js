@@ -16,21 +16,26 @@ var dialogs = [
 	},
 	{
 		index: 3,
-		content: "La fiesta va a ser el día 25 de Mayo en la escuela 🎈",
+		content: "La fiesta va a ser el día 27 de Mayo a las 12:30 pm 🎈",
 		costume: 1,
 	},
 	{
 		index: 4,
-		content: "No hace falta que traigas tu lunch, de eso yo me encargo 😄",
-		costume: 2,
-	},
-	{
-		index: 5,
-		content: "También, no olvides traer tus tapitas para que apoyemos a los niños con cáncer 😊",
+		content: "La dirección es calle 12 #216 x 37 y 39 San Juan Grande 📍",
 		costume: 1,
 	},
 	{
+		index: 5,
+		content: "Tendremos baño de piscina, así que no olvides traer tu traje 🏄‍♂️",
+		costume: 2,
+	},
+	{
 		index: 6,
+		content: "Igualmente, recuerda traer tus tapitas para que apoyemos a los niños con cáncer 😊",
+		costume: 1,
+	},
+	{
+		index: 7,
 		content: "¡Y sobre todo no faltes! Te esperamos 🎉",
 		costume: 2,
 	},
